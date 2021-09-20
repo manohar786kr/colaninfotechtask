@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".view.AddTodoFragment">
+
+    <EditText
+        android:id="@+id/titleEt"
+        style="@style/addUpdateTodoEditText"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_title_et"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/descriptionEt"
+        style="@style/addUpdateTodoEditText"
+        android:hint="@string/hint_description_et"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/timeEt"
+        style="@style/addUpdateTodoEditText"
+        android:hint="@string/hint_time_et"
+        android:inputType="time"
+        android:editable="false"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/dateEt"
+        style="@style/addUpdateTodoEditText"
+        android:hint="@string/hint_date_et"
+        android:inputType="date"
+        android:editable="false"
+        android:focusable="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Select Type : "
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checkedButton="@id/radioBtnDaily"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioBtnDaily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"/>
+
+            <RadioButton
+                android:id="@+id/radioBtnWeekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Weekly"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addTodoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Add Todo"/>
+
+</LinearLayout>

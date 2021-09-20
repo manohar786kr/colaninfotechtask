@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeTodoListFragment">
+
+    <fragment
+        android:id="@+id/homeTodoListFragment"
+        android:name="com.manohar.colaninfotechtask.view.HomeTodoListFragment"
+        android:label="Todo List"
+        tools:layout="@layout/fragment_home_todo_list">
+        <action
+            android:id="@+id/action_homeTodoListFragment_to_addUpdateTodoFragment"
+            app:destination="@id/addUpdateTodoFragment"
+            app:popUpTo="@id/homeTodoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateTodoFragment"
+        android:name="com.manohar.colaninfotechtask.view.AddTodoFragment"
+        android:label="Add Todo"
+        tools:layout="@layout/fragment_add_todo">
+        <action
+            android:id="@+id/action_addUpdateTodoFragment_to_homeTodoListFragment"
+            app:destination="@id/homeTodoListFragment" />
+        <argument android:name="todoValue" />
+    </fragment>
+</navigation>
